@@ -1,4 +1,4 @@
-export const VER = "0.3.0-beta";
+export const VER = "0.3.1-beta";
 export const TESTNET_V = 1;
 export const MAINNET_V = 2;
 export const INVOICE_QR = 2;

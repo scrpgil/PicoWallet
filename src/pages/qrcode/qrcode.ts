@@ -123,7 +123,6 @@ export class QrcodePage {
                 let pass = data.password;
                 let wallet = this.nem.importPrivateKeyWallet(obj["data"].name, pass, obj["data"].priv_key, obj["data"].salt, data.password, obj["v"]);
                 if(wallet){
-                    console.log(JSON.stringify(wallet));
                     this.nem.disconnect();
                     this.store.dispatch(new Action.Delete());
                     this.nem.createAccount(wallet.accounts[0].address, pass, wallet, obj["v"]);

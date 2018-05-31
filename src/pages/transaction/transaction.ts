@@ -35,7 +35,6 @@ export class TransactionPage {
             for(let i=0;i<mosaics.length;i++){
                 let name = mosaics[i].mosaicId["namespaceId"] + ":" + mosaics[i].mosaicId["name"];
                 let q = await this.nem.calcMosaicAmount(name, mosaics[i].quantity);
-                console.log(q);
                 m = m + name +" +"+ q + "<br>";
             }
             this.table.push({l:"MOSAICS", d:m});
